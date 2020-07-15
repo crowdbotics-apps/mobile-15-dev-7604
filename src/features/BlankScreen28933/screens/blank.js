@@ -22,7 +22,11 @@ export class _Blank extends React.Component {
     }
   }
 
-  state = { Datepicker_34: new Date("07/15/2020"), Toggle_52: true }
+  state = {
+    Toggle_25: true,
+    Datepicker_28: new Date("07/15/2020"),
+    Datepicker_11: new Date("07/15/2020")
+  }
 
   render = () => (
     <View
@@ -339,9 +343,101 @@ export class _Blank extends React.Component {
                     backgroundSize: "auto"
                   }}
                 >
+                  <Button
+                    style={{
+                      width: 100,
+                      marginLeft: 0,
+                      marginRight: 0,
+                      marginTop: 5,
+                      marginBottom: 5,
+                      paddingLeft: 5,
+                      paddingRight: 5,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      overflow: "visible",
+                      textAlign: "center",
+                      verticalAlign: "baseline",
+                      fontSize: 20,
+                      color: "#000000",
+                      backgroundColor: "#3366FF",
+                      fontStyle: "normal",
+                      fontWeight: "normal",
+                      borderColor: "#000000",
+                      borderStyle: "solid",
+                      borderWidth: 0,
+                      borderLeftWidth: 0,
+                      borderRightWidth: 0,
+                      borderTopWidth: 0,
+                      borderBottomWidth: 0,
+                      borderRadius: 0
+                    }}
+                    onPress={() => alert("Pressed!")}
+                  >
+                    Press me!
+                  </Button>
+                  <Slider
+                    value={50}
+                    minimumValue={0}
+                    maximumValue={100}
+                    step={1}
+                    disabled={false}
+                    style={{
+                      width: 100,
+                      marginLeft: 0,
+                      marginRight: 0,
+                      marginTop: 5,
+                      marginBottom: 5,
+                      paddingLeft: 5,
+                      paddingRight: 5,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      overflow: "visible",
+                      textAlign: "left",
+                      verticalAlign: "baseline",
+                      borderColor: "#000000",
+                      borderStyle: "solid",
+                      borderWidth: 0,
+                      borderLeftWidth: 0,
+                      borderRightWidth: 0,
+                      borderTopWidth: 0,
+                      borderBottomWidth: 0,
+                      borderRadius: 0
+                    }}
+                  />
+                  <Toggle
+                    text="switch ON/OFF"
+                    activeColor="#409EFF"
+                    inactiveColor="#C0CCDA"
+                    disabled={false}
+                    style={{
+                      marginLeft: 0,
+                      marginRight: 0,
+                      marginTop: 5,
+                      marginBottom: 5,
+                      paddingLeft: 5,
+                      paddingRight: 5,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      overflow: "visible",
+                      textAlign: "left",
+                      verticalAlign: "baseline",
+                      borderColor: "#000000",
+                      borderStyle: "solid",
+                      borderWidth: 0,
+                      borderLeftWidth: 0,
+                      borderRightWidth: 0,
+                      borderTopWidth: 0,
+                      borderBottomWidth: 0,
+                      borderRadius: 0
+                    }}
+                    checked={this.state.Toggle_25}
+                    onChange={nextChecked =>
+                      this.setState({ Toggle_25: nextChecked })
+                    }
+                  />
                   <Datepicker
                     style={{
-                      width: "100%",
+                      width: 100,
                       marginLeft: 0,
                       marginRight: 0,
                       marginTop: 5,
@@ -367,9 +463,9 @@ export class _Blank extends React.Component {
                       borderBottomWidth: 0,
                       borderRadius: 0
                     }}
-                    date={this.state.Datepicker_34}
+                    date={this.state.Datepicker_28}
                     onSelect={nextValue =>
-                      this.setState({ Datepicker_34: nextValue })
+                      this.setState({ Datepicker_28: nextValue })
                     }
                   />
                 </View>
@@ -409,11 +505,7 @@ export class _Blank extends React.Component {
                     backgroundSize: "auto"
                   }}
                 >
-                  <Toggle
-                    text="switch ON/OFF"
-                    activeColor="#409EFF"
-                    inactiveColor="#C0CCDA"
-                    disabled={false}
+                  <Text
                     style={{
                       marginLeft: 0,
                       marginRight: 0,
@@ -426,6 +518,11 @@ export class _Blank extends React.Component {
                       overflow: "visible",
                       textAlign: "left",
                       verticalAlign: "baseline",
+                      fontSize: 20,
+                      color: "#000000",
+                      backgroundColor: "#ffffff",
+                      fontStyle: "normal",
+                      fontWeight: "normal",
                       borderColor: "#000000",
                       borderStyle: "solid",
                       borderWidth: 0,
@@ -435,9 +532,40 @@ export class _Blank extends React.Component {
                       borderBottomWidth: 0,
                       borderRadius: 0
                     }}
-                    checked={this.state.Toggle_52}
-                    onChange={nextChecked =>
-                      this.setState({ Toggle_52: nextChecked })
+                  >
+                    Sample text content
+                  </Text>
+                  <Datepicker
+                    style={{
+                      width: "100%",
+                      marginLeft: 0,
+                      marginRight: 0,
+                      marginTop: 5,
+                      marginBottom: 5,
+                      paddingLeft: 5,
+                      paddingRight: 5,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      overflow: "visible",
+                      textAlign: "left",
+                      verticalAlign: "baseline",
+                      fontSize: 20,
+                      color: "#000000",
+                      backgroundColor: "#ffffff",
+                      fontStyle: "normal",
+                      fontWeight: "normal",
+                      borderColor: "#000000",
+                      borderStyle: "solid",
+                      borderWidth: 0,
+                      borderLeftWidth: 0,
+                      borderRightWidth: 0,
+                      borderTopWidth: 0,
+                      borderBottomWidth: 0,
+                      borderRadius: 0
+                    }}
+                    date={this.state.Datepicker_11}
+                    onSelect={nextValue =>
+                      this.setState({ Datepicker_11: nextValue })
                     }
                   />
                 </View>
