@@ -36,3 +36,20 @@ class HomePage(models.Model):
 class BGgfjgfmh(models.Model):
     "Generated Model"
     hgfhgf = models.CharField(max_length=256,)
+    cvnncvgnv = models.ForeignKey(
+        "home.HomePage",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="bggfjgfmh_cvnncvgnv",
+    )
+    jhkjh = models.ManyToManyField(
+        "users.User", blank=True, related_name="bggfjgfmh_jhkjh",
+    )
+    jhkjhkh = models.ForeignKey(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="bggfjgfmh_jhkjhkh",
+    )
