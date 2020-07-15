@@ -1,8 +1,26 @@
 import axios from "axios"
 const mobile15API = axios.create({
-  baseURL: "https://mobile-15-dev-7604.herokuapp.com/",
+  baseURL: "https://mobile-15-dev-7604.botics.co/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
+function api_v1_bggfjgfmh_list() {
+  return mobile15API.get(`/api/v1/bggfjgfmh/`)
+}
+function api_v1_bggfjgfmh_create(requestBody) {
+  return mobile15API.post(`/api/v1/bggfjgfmh/`, requestBody)
+}
+function api_v1_bggfjgfmh_read() {
+  return mobile15API.get(`/api/v1/bggfjgfmh/{id}/`)
+}
+function api_v1_bggfjgfmh_update(requestBody) {
+  return mobile15API.put(`/api/v1/bggfjgfmh/{id}/`, requestBody)
+}
+function api_v1_bggfjgfmh_partial_update(requestBody) {
+  return mobile15API.patch(`/api/v1/bggfjgfmh/{id}/`, requestBody)
+}
+function api_v1_bggfjgfmh_delete() {
+  return mobile15API.delete(`/api/v1/bggfjgfmh/{id}/`)
+}
 function api_v1_customtext_list() {
   return mobile15API.get(`/api/v1/customtext/`)
 }
@@ -67,6 +85,12 @@ function rest_auth_user_partial_update(requestBody) {
   return mobile15API.patch(`/rest-auth/user/`, requestBody)
 }
 export const apiService = {
+  api_v1_bggfjgfmh_list,
+  api_v1_bggfjgfmh_create,
+  api_v1_bggfjgfmh_read,
+  api_v1_bggfjgfmh_update,
+  api_v1_bggfjgfmh_partial_update,
+  api_v1_bggfjgfmh_delete,
   api_v1_customtext_list,
   api_v1_customtext_read,
   api_v1_customtext_update,
