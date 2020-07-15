@@ -31,3 +31,8 @@ class HomePage(models.Model):
     @property
     def field(self):
         return "body"
+
+
+class BGgfjgfmh(models.Model):
+    "Generated Model"
+    hgfhgf = models.CharField(max_length=256,)
